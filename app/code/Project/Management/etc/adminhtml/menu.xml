@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Project_Management::project" title="Project Management" translate="title"
+             module="Project_Management" sortOrder="50"
+             dependsOnModule="Project_Management" resource="Project_Management::project"/>
+
+        <add id="Project_Management::project_teacher" title="Manage Teacher" translate="title"
+             module="Project_Management" parent="Project_Management::project" sortOrder="10"
+             dependsOnModule="Project_Management" action="teacher/view"
+             resource="Project_Management::project_teacher"/>
+
+        <add id="Project_Management::project_topic" title="Manage Topic" translate="title"
+             module="Project_Management" parent="Project_Management::project" sortOrder="20"
+             dependsOnModule="Project_Management" action="topic/view"
+             resource="Project_Management::project_topic"/>
+
+        <add id="Project_Management::topic_level" title="Manage Topic Level" translate="title"
+             module="Project_Management" parent="Project_Management::project" sortOrder="30"
+             dependsOnModule="Project_Management" action="topic_level/view"
+             resource="Project_Management::topic_level"/>
+    </menu>
+</config>
